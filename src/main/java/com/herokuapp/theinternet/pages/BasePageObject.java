@@ -1,6 +1,6 @@
 package com.herokuapp.theinternet.pages;
 
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -42,7 +42,7 @@ public class BasePageObject {
     }
 
     /** Return current URL */
-    protected String getCurrentUrl(){
+    public String getCurrentUrl(){
         return driver.getCurrentUrl();
     }
 

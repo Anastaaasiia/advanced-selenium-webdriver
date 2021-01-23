@@ -1,6 +1,6 @@
 package com.herokuapp.theinternet.pages;
 
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -14,10 +14,11 @@ public class WelcomePageObject extends BasePageObject{
         super(driver, log);
     }
 
-    public void openPage(){
+    public WelcomePageObject openPage(){
         log.info("Opening page: "+pageUrl);
         openUrl(pageUrl);
         log.info("Page opened!");
+        return new WelcomePageObject(driver, log);
     }
 
     public LoginPage clickFormAuthenticationLink(){
